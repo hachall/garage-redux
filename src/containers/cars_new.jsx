@@ -49,6 +49,7 @@ class CarsNew extends Component {
           </div>
           <button type="submit">Add car</button>
         </form>
+        <Link to="/">Back to list</Link>
       </div>
     );
   }
