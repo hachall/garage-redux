@@ -13,10 +13,12 @@ class CarsIndex extends Component {
   renderCars() {
     return this.props.cars.map((car) => {
       return (
-        <div className="car-card" key={car.id}>
-          <h3>{car.brand} - {car.model}</h3>
-          <h4>{car.owner} ({car.plate})</h4>
-        </div>
+        <Link to={`/cars/${car.id}`} key={car.id}>
+          <div className="car-card" >
+            <h3>{car.brand} - {car.model}</h3>
+            <h4>{car.owner} ({car.plate})</h4>
+          </div>
+        </Link>
       )
     });
 
