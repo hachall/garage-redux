@@ -1,0 +1,8 @@
+// import { FETCH_POSTS, FETCH_POST , POST_CREATED} from '../actions';
+
+export default function(state = [], action) {
+  switch (action.type) {
+    default:
+      return state;
+  }
+}
