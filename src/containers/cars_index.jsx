@@ -5,16 +5,18 @@ import { fetchCars } from '../actions'
 
 class CarsIndex extends Component {
 
-  // componentWillMount() {
-  //   this.props.fetchCars()
-  // }
+  componentWillMount() {
+    this.props.fetchCars(this.props.garage)
+  }
 
   renderCars() {
     return this.props.cars.map((car) => {
-      <div className="car-card">
-        <h3>{car.brand} - {car.model}</h3>
-        <h4>{car.owner} ({car.late})</h4>
-      </div>
+      return (
+        <div className="car-card" key={car.id}>
+          <h3>{car.brand} - {car.model}</h3>
+          <h4>{car.owner} ({car.plate})</h4>
+        </div>
+      )
     });
 
   }
